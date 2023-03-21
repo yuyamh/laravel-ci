@@ -16,7 +16,7 @@ class ArticleControllerTest extends TestCase
     {
         $response = $this->get(route('articles.index'));
 
-        $response->assertStatus(200)
+        $response->assertStatus(400)
             ->assertViewIs('articles.index');
     }
 
@@ -26,7 +26,7 @@ class ArticleControllerTest extends TestCase
 
         $response->assertRedirect(route('login'));
     }
-    
+
     public function testAuthCreate()
     {
         $user = factory(User::class)->create();
