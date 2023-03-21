@@ -26,7 +26,7 @@ class ArticleControllerTest extends TestCase
 
         $response->assertRedirect(route('login'));
     }
-    
+
     public function testAuthCreate()
     {
         $user = factory(User::class)->create();
